@@ -83,6 +83,13 @@ function Bisection() {
           <li>To obtain the true value for the root, which is needed to compute the actual error</li>
           <p className="code-line">{">> solve(3*x + sin(x) - exp(x))"}</p>
           <InlineMath math={'ans = .36042170296032440136932951583028'}/>
+          <li>A general implementation of bisection</li>
+          <p className="code-line">{">> xb = brackPlot(fx3,0,5)"}</p>
+          <p className="code-line">{">> bisect(fx3,xb,5e-5)"}</p>
+          <InlineMath math={'ans = 3.5214'}/>
+          <p className="code-line">{">> bisect(fx3, [3 4],5e-5,5e-6,1)"}</p>
+          <InlineMath math={'ans = 3.5214'}/>
+          <p>It is shown above how <i>brackPlot</i> can be combined with <i>bisect</i> to find a single root of an equation.</p>
         </ul>
       </section>
     </div>
