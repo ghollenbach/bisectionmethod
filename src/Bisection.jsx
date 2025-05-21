@@ -30,7 +30,16 @@ function Bisection() {
           <li>The final value of <InlineMath math={'x_3'}/> approximates the root, and it is the error by not more than <InlineMath math={'\\frac{|x_1-x_2|}{2}'}/></li>
           <li>The method may produce a false root if <InlineMath math ={"f(x)"}/> is discontinuous on <InlineMath math ={"[x_1, x_2]"}/></li>
         </ul>
-
+          <p className="code-line">{">> format long e"}</p>
+          <p className="code-line">{">> fa=1e-120;fb=-2e-300;"}</p>
+          <p className="code-line">{">> fa*fb"}</p>
+          <p className="code-line">{"ans = 0"}</p>
+          <p className="code-line">{">> sign(fa)~=sign(fb)"}</p>
+          <p className="code-line">{"ans = 1"}</p>
+      </section>
+      <section className="bisection-section">
+        <h2>Example 1</h2>
+        <p>Apply bisection to <InlineMath math={'f(x)=x-x^{\\frac{1}{3}}-2'}/>. </p>
       </section>
     </div>
   );

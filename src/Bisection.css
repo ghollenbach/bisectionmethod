@@ -28,3 +28,10 @@
   width: auto;
 }
 
+.code-line {
+  font-family: 'Fira Code', monospace;
+  white-space: pre; /* preserves spaces */
+  margin: 0;        /* remove extra paragraph spacing */
+}
+
+
