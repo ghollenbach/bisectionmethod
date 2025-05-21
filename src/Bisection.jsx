@@ -30,12 +30,12 @@ function Bisection() {
           <li>The final value of <InlineMath math={'x_3'}/> approximates the root, and it is the error by not more than <InlineMath math={'\\frac{|x_1-x_2|}{2}'}/></li>
           <li>The method may produce a false root if <InlineMath math ={"f(x)"}/> is discontinuous on <InlineMath math ={"[x_1, x_2]"}/></li>
         </ul>
-          <p className="code-line">{">> format long e"}</p>
-          <p className="code-line">{">> fa=1e-120;fb=-2e-300;"}</p>
-          <p className="code-line">{">> fa*fb"}</p>
-          <p className="code-line">{"ans = 0"}</p>
-          <p className="code-line">{">> sign(fa)~=sign(fb)"}</p>
-          <p className="code-line">{"ans = 1"}</p>
+        <p className="code-line">{">> format long e"}</p>
+        <p className="code-line">{">> fa=1e-120;fb=-2e-300;"}</p>
+        <p className="code-line">{">> fa*fb"}</p>
+        <p className="code-line">{"ans = 0"}</p>
+        <p className="code-line">{">> sign(fa)~=sign(fb)"}</p>
+        <p className="code-line">{"ans = 1"}</p>
       </section>
       <section className="bisection-section">
         <h2>Example 1</h2>
@@ -55,6 +55,35 @@ function Bisection() {
           <li>Elif <InlineMath math={'f(c)'}/> and <InlineMath math={'f(b)'}/> have opposite roots, repeat with interval <InlineMath math={'[a, b] = [c, b]'}/>.</li>
           <li>Repeat until the difference between <InlineMath math={'a'}/> and <InlineMath math={'b'}/> is <InlineMath math={'< ε'}/>.</li>
         </ol>
+      </section>
+      <section className="bisection-section">
+        <h2>Example 2</h2>
+        <p>Bracketing the roots of the function, <InlineMath math={'y = f(x) = sin(x)'}/>.</p>
+        <p>http://siber.cankaya.edu.tr/ozdogan/NumericalComputations/mfiles/chapter1/brackPlot.m m-file:brackPlot.m</p>
+        <p className="code-line">{">> brackPlot('sin',-pi,pi)"}</p>
+        <p className="code-line">{">> brackPlot('sin',-2*pi,2*pi)"}</p>
+        <p className="code-line">{">> brackPlot('sin',-4*pi,4*pi)"}</p>
+      <p>Now, try with a user defined function: <InlineMath math={'f(x)=x-x^{\\frac{1}{3}}-2'}/></p>
+      <p className="code-line">{">> brackPlot('fx3',?,?)"}</p>
+      <p>In both examples, try with different variables.</p>
+      </section >
+      <section className="bisection-section">
+        <h2>Example 3</h2>
+        <p>Take the function: <InlineMath math={'3x+sin(x)-e^x'}/></p>
+        <p>Look at the plot of the function to learn where the function crosses the x-axis: </p>
+        <img src= {`${import.meta.env.BASE_URL}Figure 32.png`} alt="Figure 3.2" className="figure-img" />
+        <figcaption>Figure 3.2. Plot of the function: <InlineMath math={'3x+sin(x)-e^x'}/> </figcaption>
+        <p>The figure indicates that there are zeros at about <InlineMath math={'x = 0.35'}/> and <InlineMath math={'x = 1.9'}/></p>
+        <p>Obtain the true value for the root, which is needed to compute the actual error (using MATLAB):</p>
+        <p className="code-line">{">> solve(3*x + sin(x) - exp(x))"}</p>
+        <InlineMath math={'ans = 0.360421702960324401369'}/>
+        <img src= {`${import.meta.env.BASE_URL}Table 31.png`} alt="Table 3.1" className="figure-img" />
+        <figcaption>Table 3.1. The bisection method, applied to <InlineMath math={'3x+sin(x)-e^x'}/>. The algorithm finds a value between <InlineMath math={'0'}/> and <InlineMath math={'1'}/> such that the function evaluated at that value is within <InlineMath math={'\\epsilon = 10^{-4}'}/> of <InlineMath math={'0'}/>. </figcaption>
+        <ul>
+          <li>To obtain the true value for the root, which is needed to compute the actual error</li>
+          <p className="code-line">{">> solve(3*x + sin(x) - exp(x))"}</p>
+          <InlineMath math={'ans = .36042170296032440136932951583028'}/>
+        </ul>
       </section>
     </div>
   );
