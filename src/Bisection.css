@@ -1,0 +1,30 @@
+
+.bisection-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #000000;
+}
+
+.bisection-section h1 {
+    font-size: 35px;
+
+}
+    
+.bisection-section h2 {
+    font-size: 30px;
+}
+
+.bisection-section h3 {
+    font-size: 25px;
+}
+
+.bisection-section p, .bisection-section ul {
+    font-size: 20px;
+}
+
+.figure-img {
+  height: 350px;
+  width: auto;
+}
+

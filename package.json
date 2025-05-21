@@ -7,9 +7,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.8.2",
+    "katex": "^0.16.22",
     "react": "^18.2.0",
     "react-chrome-dino": "^0.1.3",
     "react-dom": "^18.2.0",
+    "react-katex": "^3.1.0",
     "react-router-dom": "^7.3.0",
     "react-simple-typewriter": "^5.0.1",
     "web-vitals": "^3.1.0"
@@ -19,7 +21,7 @@
     "@adobe/css-tools": "^4.3.1",
     "postcss": "^8.4.31"
   },
-  "homepage": "https://ghollenbach.github.io/gracewebsite/",
+  "homepage": "https://ghollenbach.github.io/bisectionmethod",
   "scripts": {
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
     "build": "vite build",
