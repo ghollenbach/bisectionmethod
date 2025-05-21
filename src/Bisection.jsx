@@ -40,6 +40,21 @@ function Bisection() {
       <section className="bisection-section">
         <h2>Example 1</h2>
         <p>Apply bisection to <InlineMath math={'f(x)=x-x^{\\frac{1}{3}}-2'}/>. </p>
+        <ol>
+          <li>Find values <InlineMath math={'a'}/> and <InlineMath math={'b'}/> where <InlineMath math={'f'}/> is continuous on the interval <InlineMath math={'[a, b]'}/> and <InlineMath math={'f(a)'}/> and <InlineMath math={'f(b)'}/> have opposite signs.</li>
+            <ol type="a">
+              <li><InlineMath math={'f(0)= -2'}/></li>
+              <li><InlineMath math={'f(6)= 2.18'}/></li>
+            </ol>
+          <li>Find the midpoint: <InlineMath math={'c = \\frac{a+b}{2}'}/></li>
+            <ol type="a">
+              <li><InlineMath math={'c = \\frac{0+6}{2} = 3'}/></li>
+            </ol>
+          <li>If <InlineMath math={'f(c) = 0'}/>, return <InlineMath math={'c'}/> as root.</li>
+          <li>Elif <InlineMath math={'f(a)'}/> and <InlineMath math={'f(c)'}/> have opposite roots, repeat with interval <InlineMath math={'[a, b] = [a, c]'}/>.</li>
+          <li>Elif <InlineMath math={'f(c)'}/> and <InlineMath math={'f(b)'}/> have opposite roots, repeat with interval <InlineMath math={'[a, b] = [c, b]'}/>.</li>
+          <li>Repeat until the difference between <InlineMath math={'a'}/> and <InlineMath math={'b'}/> is <InlineMath math={'< ε'}/>.</li>
+        </ol>
       </section>
     </div>
   );
