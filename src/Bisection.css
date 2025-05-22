@@ -1,16 +1,15 @@
+.bisection-container {
+    max-width: 1300px;
+    margin-left: 250px;
+    padding: 2rem 1rem;
+    color: #000000;
+}
+
 .code-line {
   margin-left: 40px;
   font-family: 'Fira Code', monospace;
   white-space: pre; /* preserves spaces */
   margin: 0.05;        /* remove extra paragraph spacing */
-}
-
-.bisection-container {
-    max-width: 1300px;
-    margin-left: 60px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    color: #000000;
 }
 
 .inline-math {
