@@ -77,6 +77,7 @@ function Bisection() {
         <p>Obtain the true value for the root, which is needed to compute the actual error (using MATLAB):</p>
         <p className="code-line">{">> solve(3*x + sin(x) - exp(x))"}</p>
         <InlineMath math={'ans = 0.360421702960324401369'}/>
+        <div style={{ height: '16px' }}></div>
         <img src= {`${import.meta.env.BASE_URL}Table 31.png`} alt="Table 3.1" className="figure-img" />
         <figcaption>Table 3.1. The bisection method, applied to <InlineMath math={'3x+sin(x)-e^x'}/>. The algorithm finds a value between <InlineMath math={'0'}/> and <InlineMath math={'1'}/> such that the function evaluated at that value is within <InlineMath math={'\\epsilon = 10^{-4}'}/> of <InlineMath math={'0'}/>. </figcaption>
         <ul>
