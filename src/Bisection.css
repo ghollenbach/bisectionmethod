@@ -1,9 +1,18 @@
+.code-line {
+  font-family: 'Fira Code', monospace;
+  white-space: pre; /* preserves spaces */
+  margin: 0.05;        /* remove extra paragraph spacing */
+}
 
 .bisection-container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 2rem 1rem;
     color: #000000;
+}
+
+.inline-math {
+  font-size: 20px;
 }
 
 .bisection-section h1 {
@@ -26,12 +35,6 @@
 .figure-img {
   height: 350px;
   width: auto;
-}
-
-.code-line {
-  font-family: 'Fira Code', monospace;
-  white-space: pre; /* preserves spaces */
-  margin: 0;        /* remove extra paragraph spacing */
 }
 
 

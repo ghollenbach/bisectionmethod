@@ -83,13 +83,42 @@ function Bisection() {
           <li>To obtain the true value for the root, which is needed to compute the actual error</li>
           <p className="code-line">{">> solve(3*x + sin(x) - exp(x))"}</p>
           <InlineMath math={'ans = .36042170296032440136932951583028'}/>
+          <div style={{ height: '16px' }}></div>
           <li>A general implementation of bisection</li>
           <p className="code-line">{">> xb = brackPlot(fx3,0,5)"}</p>
           <p className="code-line">{">> bisect(fx3,xb,5e-5)"}</p>
           <InlineMath math={'ans = 3.5214'}/>
           <p className="code-line">{">> bisect(fx3, [3 4],5e-5,5e-6,1)"}</p>
           <InlineMath math={'ans = 3.5214'}/>
-          <p>It is shown above how <i>brackPlot</i> can be combined with <i>bisect</i> to find a single root of an equation.</p>
+                    <div style={{ height: '16px' }}></div>
+
+          <li>It is shown above how <i>brackPlot</i> can be combined with <i>bisect</i> to find a single root of an equation.</li>
+          <li>The same procedure can be extended to find more than one root if more than one root exists. Consider the code</li>
+        </ul>
+        <p className="code-line">{"xmin= . . . ; xmax= . . . ;"}</p>
+        <p className="code-line">{"Xb=brackPlot(myFunction,xmin,xmax);"}</p>
+        <p className="code-line">{"for k=1:size(Xb, 1)"}</p>
+        <p className="code-line">{"     x(k)=bisect(myFunction,Xb(k,c));"}</p>
+        <p className="code-line">{"     fprintf(Suspected root at %f gives f(x)=%f \n),"}</p>
+        <p className="code-line">{"           x(k),myFunction(x(k))"}</p>
+        <p className="code-line">{"end"}</p>
+        <p>Use an appropriate myFunction, a suggestion is sine function.</p>
+        <p>The root is (almost) never known exactly, since it is extremely unlikely that a numerical procedure will find the price value of x that makes f(x) exactly zero in floating-point arithmetic.</p>
+        <ul>
+          <li>The main advantage of interval halving is that it is guaranteed to work (continuous & bracket).</li>
+          <li>The algorithm must decide how close to the root the guess should be before stopping the search (see Fig.3.3).</li>
+        </ul>
+        <img src= {`${import.meta.env.BASE_URL}Figure 33.png`} alt="Figure 3.3" className="figure-img" />
+        <figcaption>Figure 3.3. The stopping criterion for a root-finding procedure should involve a tolerance on <InlineMath math={'x'}/>, as well as a tolerance on <InlineMath math={'f(x)'}/>. </figcaption>
+        <ul>
+          <li>This guarantee can be avoided, if the function has a slope very near to zero at the root.</li>
+          <li>Because the interval <InlineMath math={'[a, b]'}/> is halved each time, the number of iterations to achieve a specified accuracy is known in advance.</li>
+          <li>The last value of <InlineMath math={'x_3'}/> differs from the true root by less than <InlineMath math={'\\frac{1}{2}'}/> the last interval.</li>
+          <li>So we can say with surely that</li>
+          <InlineMath math={'\\text{error after n iterations} < |\\frac{b-a}{2^n}|'}/>
+          <li>When there are multiple roots, interval halving may not be applicable, because the function may not change sign at points on either side of the roots.</li>
+          <li>The major objection of interval halving has been that it is <b>slow to converge.</b></li>
+          <li>Bisection is generally recommended for finding an approximate value for the root, and then this value is refined by more efficient methods.</li>
         </ul>
       </section>
     </div>
