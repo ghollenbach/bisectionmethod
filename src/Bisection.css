@@ -12,10 +12,6 @@
   margin: 0.05;        /* remove extra paragraph spacing */
 }
 
-.inline-math {
-  font-size: 20px;
-}
-
 .bisection-section h1 {
     font-size: 35px;
 
@@ -43,4 +39,10 @@ figcaption {
   margin-left: 70px;
 }
 
-
+.highlight-math {
+  background-color: #fff3cd; /* light yellow */
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+}

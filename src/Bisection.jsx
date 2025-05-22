@@ -100,7 +100,7 @@ function Bisection() {
         <p className="code-line">{"Xb=brackPlot(myFunction,xmin,xmax);"}</p>
         <p className="code-line">{"for k=1:size(Xb, 1)"}</p>
         <p className="code-line">{"     x(k)=bisect(myFunction,Xb(k,c));"}</p>
-        <p className="code-line">{"     fprintf(Suspected root at %f gives f(x)=%f \n),"}</p>
+        <p className="code-line">{"     fprintf(Suspected root at %f gives f(x)=%f) \\n),"}</p>
         <p className="code-line">{"           x(k),myFunction(x(k))"}</p>
         <p className="code-line">{"end"}</p>
         <p>Use an appropriate myFunction, a suggestion is sine function.</p>
@@ -116,7 +116,7 @@ function Bisection() {
           <li>Because the interval <InlineMath math={'[a, b]'}/> is halved each time, the number of iterations to achieve a specified accuracy is known in advance.</li>
           <li>The last value of <InlineMath math={'x_3'}/> differs from the true root by less than <InlineMath math={'\\frac{1}{2}'}/> the last interval.</li>
           <li>So we can say with surely that</li>
-          <InlineMath math={'\\text{error after n iterations} < |\\frac{b-a}{2^n}|'}/>
+          <span className="highlight-math"> <InlineMath math={'\\text{error after n iterations} < |\\frac{b-a}{2^n}|'}/> </span>
           <li>When there are multiple roots, interval halving may not be applicable, because the function may not change sign at points on either side of the roots.</li>
           <li>The major objection of interval halving has been that it is <b>slow to converge.</b></li>
           <li>Bisection is generally recommended for finding an approximate value for the root, and then this value is refined by more efficient methods.</li>
